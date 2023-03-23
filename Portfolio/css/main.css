@@ -1,0 +1,301 @@
+@font-face {
+    font-family: press-start-2p;
+    src: url('../pressstart2p-regular.ttf');
+}
+
+body {
+    background-color: #000055;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 250%;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#background {
+    background-image: url('../media/spaceInvadersGameplay.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 0%;
+    background-position-y: 60%;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    filter: brightness(25%) opacity(90%);
+}
+
+#title {
+    filter: brightness(100%);
+    filter: opacity(100%);
+    background-color: lightblue;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-family: press-start-2p;
+    font-size: 220%;
+}
+
+#title > p {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#tagline {
+    filter: brightness(100%);
+    filter: opacity(100%);
+    background-color: black;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightblue;
+    text-align: center;
+    font-family: press-start-2p;
+    font-size: 130%;
+}
+
+#tagline > p {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#about-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about-heading {
+    text-align: center;
+}
+
+#profile {
+    width: 25%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+#profile > img {
+    width: 100%;
+    border: 3px double white;
+}
+
+#about {
+    width: 60%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 135%;
+}
+
+.navbar {
+    filter: brightness(100%);
+    filter: opacity(100%);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000055;
+    border-bottom: 4px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+}
+
+.navbar > p {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > p a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar > p a:hover, .navbar > p a:active {
+    background-color: #000033;
+}
+
+#buttons {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button {
+    width: 32%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 4px 2px;
+    font-size: 135%;
+    cursor: pointer;
+}
+
+#ritButton {
+    background-color: #f76907;
+    color: black;
+}
+#uatButton {
+    background-color: #c9c9cb;
+    color: black;
+}
+
+#gallery {  
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.subsection {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subsection h2 {
+    font-size: 180%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.subsection p {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.subsection img {
+    display: inline;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+}
+
+.subsection > p a {
+    color: white;
+}
+
+#contact {
+    margin-top: 2vw;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    border-top: 3px solid black;
+}
+
+.contactinfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.contactinfo > p a {
+   display: block;
+   text-align: center;
+   padding: 14px 16px;
+   background-color: #000055;
+   text-decoration: none;
+}
+
+.contactinfo > p > a:link, a:visited {
+    color: white;
+}
+
+.contactinfo > p > a:focus {
+    color: white;
+    background-color: #000033;
+}
+
+.contactinfo > p > a:hover {
+    color: white;
+    background-color: #000033;
+}
+
+.contactinfo > p > a:active {
+    color: white;
+    background-color: #000033;
+}
+
+@media only screen and (max-width:769px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 200%;
+    }
+
+    h1 {
+        text-decoration: underline;
+    }
+
+    header {
+        margin-bottom: 1vw;
+    }
+
+    #background {
+        background-position-y: 70%;
+    }
+
+    #title {
+        font-size: 150%;
+    }
+
+    #tagline {
+        font-size: 90%;
+    }
+
+    #about-text {
+        flex-direction: column;
+    }
+
+    #profile {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about {
+        margin-left: 4vw;
+        margin-right: 4vw;
+        font-size: 100%;
+    }
+
+    .subsection {
+        margin-bottom: 10%;
+    }
+
+    .subsection h2 {
+        font-size: 150%;
+    }
+
+    .subsection img {
+        display: block;
+        width: 90%;
+    }
+}

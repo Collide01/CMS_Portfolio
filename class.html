@@ -29,7 +29,7 @@
     <div id="buttons">
         <button id="ritButton" onclick="myFunctionRIT()">RIT</button>
         <button id="uatButton" onclick="myFunctionUAT()">UAT</button>
-        <button id="allButton" onclick="myFunctionAll()">All</button>
+        <button id="allButton" onclick="myFunctionAll()" disabled>All</button>
     </div>
 
     <div id="rit">
@@ -354,7 +354,7 @@
                     UFO Attack is a flying shooter that takes place in space.
                     <br><br>The game includes a main menu and a controls page that informs the player of the control 
                     scheme. Players can also exit the game through the main menu.
-                    <br><br>The game containns a scene where the player is informed of the enemy they face and what 
+                    <br><br>The game contains a scene where the player is informed of the enemy they face and what 
                     they must do to take it down. The main game has the player fly a blue ship, shooting the purple turrets 
                     that guard the big golden ship as well as red enemy ships.
                     <br><br>After completing the game, players are presented with a flashy scene of the golden ship 
@@ -362,6 +362,29 @@
                     health the player has when they win. If they lose, they are sent to a lose screen and are given 
                     the option to retry the game.
                     <br><br>Click this <a href="https://collide01.itch.io/ufo-attack">link</a> to download and play it.
+                </p>
+            </div>
+        </div>
+        <div class="subsection">
+            <div class="image">
+                <img src="media/koaTitle.png" alt="koa">
+                <img src="media/koaGameplay.png" alt="koaGameplay">
+            </div>
+            <div class="text">
+                <h2>Knock-Out Arcade<br>UAT First Year, Summer Semester</h2>
+                <p>
+                    Knock-Out Arcade is a 2D fighting game made in Game Maker Studio 2 with the Game Maker language.
+                    <br><br>This was a Production Studio project, meaning it was a student-run project pitched for other 
+                    students to work on in a class. Different students get onboarded across semesters, and I was onboarded 
+                    as a programmer during the project's second semester running.
+                    <br><br>During my time working on the project, I quickly established myself as a teammate that was 
+                    dedicated to make the project as good as possible with the time I had to work on it. I communicated 
+                    frequently with the project lead, the designers, and the other programmers to get a firm grasp of the 
+                    overall vision of the project and what needed to be done.
+                    <br><br>Even though I wasn't classified as a lead in the project, the other programmers often came to me 
+                    for help on their tasks and I helped them. Rather than doing the tasks for them, I taught them the best 
+                    ways for them to do their tasks and gave them a starting point to work off of whenever they got stuck. 
+                    <br><br>Click this <a href="https://jazz-boy.itch.io/knock-out-arcade">link</a> to download and play it.
                 </p>
             </div>
         </div>
@@ -380,16 +403,25 @@
         function myFunctionRIT() {
             document.getElementById("rit").hidden = false;
             document.getElementById("uat").hidden = true;
+            document.getElementById("ritButton").disabled = true;
+            document.getElementById("uatButton").disabled = false;
+            document.getElementById("allButton").disabled = false;
         }
     
         function myFunctionUAT() {
             document.getElementById("rit").hidden = true;
             document.getElementById("uat").hidden = false;
+            document.getElementById("ritButton").disabled = false;
+            document.getElementById("uatButton").disabled = true;
+            document.getElementById("allButton").disabled = false;
         }
     
         function myFunctionAll() {
             document.getElementById("rit").hidden = false;
             document.getElementById("uat").hidden = false;
+            document.getElementById("ritButton").disabled = false;
+            document.getElementById("uatButton").disabled = false;
+            document.getElementById("allButton").disabled = true;
         }
     </script>
 </body>

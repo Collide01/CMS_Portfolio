@@ -113,6 +113,12 @@ header {
     font-size: 135%;
 }
 
+.objective {
+    width: 75%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
 .navbar {
     filter: brightness(100%);
     filter: opacity(100%);

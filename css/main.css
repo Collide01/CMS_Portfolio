@@ -193,6 +193,15 @@ button {
 .image img {
     width: 100%;
 }
+
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .text {
     width: 60%;
     padding-left: 2vw;

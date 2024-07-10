@@ -35,11 +35,6 @@ header {
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    
-}
-
-#background {
-    filter: brightness(25%) opacity(90%);
 }
 
 #title {

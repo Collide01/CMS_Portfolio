@@ -12,7 +12,7 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    padding-top: 3.6vw;
+    padding-top: 3.6vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,6 +81,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 2vh;
 }
 
 #profile {
@@ -174,7 +175,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: 2vh;
 }
 .image {
     width: 40%;
@@ -296,5 +297,11 @@ button {
     .subsection img {
         display: block;
         width: 90%;
+    }
+
+    .navbar > p {
+        margin: 0;
+        padding: 0;
+        font-size: 50%;
     }
 }

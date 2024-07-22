@@ -117,54 +117,32 @@
             </div>
         </div>
         <p>4. Demonstrate the ability to evaluate game designs for a variety of gameplay mechanics, game applications and game genres.</p>
-        <div class="text">
-            <p>
-                In the Level Design class, we were taught the 20 rRules of Level Design. We discussed what we learned about them, 
-                how that applied to our own projects, and examples of games following or not following them. Here is 
-                <a href="media/rules.pdf" target="_blank">my analysis</a> of the rules.
-            </p>
+        <div class="subsection">
+            <div class="image">
+                <iframe class="pdf" src="media/rules.pdf"></iframe>
+            </div>
+            <div class="text">
+                <p>
+                    In the Level Design class, we were taught the 20 Rules of Level Design. We discussed what we learned about them, 
+                    how that applied to our own projects, and examples of games following or not following them.
+                    <br>Here is <a href="media/rules.pdf" target="_blank">my analysis</a> of the rules.
+                </p>
+            </div>
         </div>
-        <div class="text">
-            <p>
-                In the Advanced Level Design class, we had weekly discussions about level (and game) design in different genres. 
-                In these discussions, we discussed our opinion of the genre, what we feel defines a "good game" in the genre, and 
-                some good and bad examples of the genre.
-                <br>This is the post that I made about the stealth genre:
-                <br>All stealth games have a simple objective: accomplish the goal while staying out of sight. The games themselves 
-                will add nuance to this with the level design and the behavior of the AI. These kinds of games require you to plan 
-                out your course of action on the fly as you navigate through the levels and avoid getting spotted. I'm not that good 
-                at these kinds of games, but I respect these games for their interesting and unique level design and mechanics.
-                <br>I think a good stealth game has to be challenging and make you use your brain. Stealth encounters don't want you 
-                to blitz through the level like it's a hack and slash, so the mechanics and level design need to prevent that. At the 
-                same time, the game needs to give you a certain amount of tools that can help you complete the level while making the 
-                game fun.
-                <br>I know Metal Gear Solid is the creme de la creme of stealth games, but I don't have any personal experience with 
-                those games. So instead, I'll talk about the Batman Arkham games, as I think the stealth levels in those games are 
-                phenomenal. Every stealth level follows the same pattern in terms of layout: Batman starts off out of sight in a big 
-                room, and all of the enemies are standing or slowly walking around with guns. Batman doesn't have any sort of 
-                resistance to guns since he's only human, so getting spotted and shot at will put Batman in serious danger. This 
-                incentivizes the player to avoid getting spotted. In order to take down the enemies, the player has access to a 
-                wide range of tools and gadgets. This gives the player a lot of freedom in how they want to take down the enemies. 
-                At the same time, these tools have to be used wisely because most of them won't outright take down enemies for you, 
-                only stunning them long enough for you to take them down yourself. Levels may also provide a number of routes for 
-                the player to use, such as through vents and grates. Players can use these paths to perform surprise attacks or make 
-                quick getaways, but if an enemy spots Batman using one of these hidden paths, they will stay aware of them for the 
-                rest of the encounter, essentially blocking them off as stealth routes. All of these factors combine to make stealth 
-                levels in the Batman Arkham games intense, thrilling, and fun.
-                <br>As much as I like the Insomniac Spider-Man games, I think the stealth segments in those games are kind of a joke 
-                in comparison to the Batman Arkham games (I'm talking about Spider-Man stealth, not the MJ or Miles segments from the 
-                first game). My main problem with them is that they are too easy. Spider-Man has ton of freedom of movement, which 
-                makes it easy to stay out of the enemies' sights. Across both the first game and Miles Morales, Spider-Man has a ton 
-                of tools that allow him to take down enemies from far away, making it basically pointless to sneak up behind them. 
-                By far the most egregious aspect of the stealth in these games is that when you scan the environment, the game will 
-                straight-up tell you if it's safe to take down an enemy. Now you don't have to be aware of your surroundings when 
-                taking down an enemy, you can just take them down if the game tells you ‘yes’. All of these factors make stealth in 
-                these Spider-Man games unsatisfying and boring. Also, unless stealth is required for a mission, stealth in these 
-                games is completely pointless because you can fight the enemies normally by dodging bullets and throwing their guns 
-                around. Why would I want to sneak around and slowly pick off enemies when I could use the more fun route and blitz 
-                through them?
-            </p>
+        <div class="subsection">
+            <div class="image">
+                <iframe class="pdf" src="media/advStealth.pdf"></iframe>
+            </div>
+            <div class="text">
+                <p>
+                    In the Advanced Level Design class, we had weekly discussions about level (and game) design in different genres. 
+                    In these discussions, we discussed our opinion of the genre, what we feel defines a "good game" in the genre, and 
+                    some good and bad examples of the genre.
+                    <br>This is <a href="media/advStealth.pdf" target="_blank">the post</a> that I made about the stealth genre.
+                </p>
+            </div>
         </div>
+        
         <p>5. Effectively articulate game design elements and mechanics across disciplines utilizing written and verbal communication skills.</p>
         <div class="subsection">
             <div class="image">
@@ -378,6 +356,33 @@
                 </p>
             </div>
         </div>
+        <div class="subsection">
+            <div class="image">
+                <h2>Knock-Out Arcade</h2>
+                <img src="media/koaTitle.png" alt="koa">
+                <img src="media/koaGameplay.png" alt="koaGameplay">
+            </div>
+            <div class="text">
+                <p>
+                    Knock-Out Arcade is a 2D fighting game made in Game Maker Studio 2 with the Game Maker language. I helped 
+                    development for this project as a programmer when it was pitched to Production Studio.
+                    <br><br>When I was working on this project, one of our main goals was to properly implement projectiles. Only one 
+                    character at the time had a projectile and it was hard-coded. If we wanted multiple characters to use projectiles, 
+                    it would be difficult to implement that because of this issue.
+                    <br><br>One of the previous programmers developed a character editor with C# to streamline character creation for the 
+                    designers, so I started there with the implementation. I programmed an extension for the program 
+                    that reimplements a lot of its code to allow designers to create projectiles. I added a lot of unique data for 
+                    the projectiles that specifies how they would function too.
+                    <br><br>Once the character editor was done, I worked on the game itself to implement all of that new data. One of 
+                    our biggest issues at this point was that hitstop was global, meaning both players would pause for a bit if 
+                    anyone got hit, not just the player that got hit. This would be detrimental to the overall game flow with projectiles, 
+                    so our project lead, Ryland Kealey, fixed that for me as I worked on the projectiles.
+                    <br><br>This new implementation of projectiles is far more robust and flexible than before, and it makes it much 
+                    easier for designers to implement them.
+                    <br><br>Click this <a href="https://jazz-boy.itch.io/knock-out-arcade" target=”_blank”>link</a> to download and play it.
+                </p>
+            </div>
+        </div>
         <p>5. Demonstrate development skills using multiple programming languages, development environments and platforms, including advanced and/or experimental topics in game programming.</p>
         <div class="subsection">
             <div class="image">
@@ -393,6 +398,26 @@
                     to direct or misdirect players through the level. The different sounds help players identify things and the 
                     3D sound features help players locate things without seeing them.
                     <br><br>Download and play it <a href="media/BlindJumping.zip" download>here</a>.
+                </p>
+            </div>
+        </div>
+        <div class="subsection">
+            <div class="image">
+                <h2>The Cursed Men and The Stolen Princess</h2>
+                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle">
+                <img src="media/cursedMen.png" alt="cursedMen">
+            </div>
+            <div class="text">
+                <p>
+                    The Cursed Men and The Stolen Princess is a 2.5D RPG made in Unreal using Blueprints.
+                    <br><br>This was a Production Studio project, meaning it was a student-run project pitched for other 
+                    students to work on in a class. Different students get onboarded across semesters, and I was onboarded 
+                    as a programmer during the project's first semester running.
+                    <br><br>The dialogue and the quest system utilize data tables to organize the data and make it easy 
+                    for designers to insert new data into them. Each data table has different structures to organize the data. 
+                    Separate spreadhseets outside of the project can be downloaded as comma-separated values (.csv) and inserted into 
+                    the game as data tables for these systems.
+                    <br><br>No link or download has been provided yet.
                 </p>
             </div>
         </div>

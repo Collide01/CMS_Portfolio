@@ -20,9 +20,9 @@
     </nav>
 
     <div id="buttons">
-        <button id="ritButton" onclick="myFunctionRIT()">RIT Projects</button>
-        <button id="uatButton" onclick="myFunctionUAT()">UAT Projects</button>
-        <button id="allButton" onclick="myFunctionAll()" disabled>All Projects</button>
+        <button class="projectButtons" id="ritButton" onclick="myFunctionRIT()">RIT Projects</button>
+        <button class="projectButtons" id="uatButton" onclick="myFunctionUAT()">UAT Projects</button>
+        <button class="projectButtons" id="allButton" onclick="myFunctionAll()" disabled>All Projects</button>
     </div>
 
     <div id="rit">
@@ -207,15 +207,16 @@
                 <p>
                     Vitamin Deficiency is a top-down rougelike created by a group of 4. In this game, you play 
                     as a farmer, shooting mutated vegetables that are causing havoc.
-                    <br><br>The map that the player runs around in is randomly generated, so that playing through multiple runs doesn't 
-                    feel repetitive.
-                    <br><br>The way that the map is generated is based on two factors: the positions of the entryways for each room, 
-                    and whether it is a regular room, the starting room, or the boss room. The starting room can have as many 
-                    entryways as needed, so all of the other rooms are placed around it. An algorithm is used to determine if the doors 
-                    for each room connect to each other so that the entire map is interconnected. Finally, the boss room is set to 
-                    only have one door, so it would usually be placed on a distant part of the map.
-                    <br><br>Inheritance was used to categorize the different enemies and bullet types that they and the player can use. 
-                    Each enemy has a different AI and the bullets behave differently when fired.
+                    <br><br>Inheritance was used to create the enemies. There is a base class that all enemy classes are children of, 
+                    which contains shared information such as max health, move speed, different AI states, and different functions to 
+                    perform for each state. Specific methods are overridden to make each type of enemy attack and move differently.
+                    <br><br>The bosses are a unique case in that they have different phases depending on how much health they have. 
+                    As such, they have their own state machines determining which phase they are currently in, and that dictates their 
+                    AI patterns and attacks.
+                    <br><br>All animations for each enemy is handled by Unity's built-in animation system. The animations themselves 
+                    are hand-drawn by me and are imported into the project as sprite sheets. This gives me control over each animation 
+                    with how quickly they animate and it allows me to use animation events to manipulate their AI so they smoothly change 
+                    from one state to another.
                     <br><br>Click this <a href="https://eruhl-interactive.itch.io/vitamin-deficiency" target=”_blank”>link</a> to download and play it.
                 </p>
             </div>

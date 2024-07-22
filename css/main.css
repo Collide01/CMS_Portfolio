@@ -147,7 +147,7 @@ header {
     display: block;
 }
 
-button {
+.projectButtons {
     width: 32%;
     text-align: center;
     text-decoration: none;

@@ -108,6 +108,21 @@ header {
     margin-right: 3vw;
 }
 
+.objectiveButtons {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+#designObjective1, #designObjective2, #designObjective3, #designObjective4, #designObjective5, #designObjective6, 
+#programmingObjective1, #programmingObjective2, #programmingObjective3, #programmingObjective4, #programmingObjective5, #programmingObjective6 {
+    display: none;
+}
+
 .navbar {
     filter: brightness(100%);
     filter: opacity(100%);

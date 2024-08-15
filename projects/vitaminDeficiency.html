@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Collin's Portfolio | Vitamin Deficiency</title>
+    <link rel="icon" href="../media/logo.png">
+
+    <style>
+        header {
+            background-color: black;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url(../media/vitaminGameplay.png);
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <p style="font-size: 80%;">Vitamin Deficiency</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <p><a href="../index.html">Home</a></p>
+        <p><a href="../personal.html">Personal Projects</a></p>
+        <p><a href="../projects.html">Game Projects</a></p>
+        <p><a href="../game-jams.html">Game Jams</a></p>
+    </nav>
+
+    <div class="projectPage">
+        <p><u>Role</u>: AI Programmer/Enemy Design</p>
+        <p><u>Platform</u>: PC</p>
+        <p><u>Software</u>: Unity</p>
+        <p><u>Project Description</u>: Vitamin Deficiency is a top-down rougelike created by a group of 4. In this game, you play 
+            as a farmer, shooting mutated vegetables that are causing havoc.
+            <br><br>Inheritance was used to create the enemies. There is a base class that all enemy classes are children of, 
+            which contains shared information such as max health, move speed, different AI states, and different functions to 
+            perform for each state. Specific methods are overridden to make each type of enemy attack and move differently.
+            <br><br>The bosses are a unique case in that they have different phases depending on how much health they have. 
+            As such, they have their own state machines determining which phase they are currently in, and that dictates their 
+            AI patterns and attacks.
+            <br><br>All animations for each enemy is handled by Unity's built-in animation system. The animations themselves 
+            are hand-drawn by me and are imported into the project as sprite sheets. This gives me control over each animation 
+            with how quickly they animate and it allows me to use animation events to manipulate their AI so they smoothly change 
+            from one state to another.</p>
+        
+        
+    </div>
+
+    <footer id="contact">
+        <h1>Contact</h1>
+        <div class="contactinfo">
+            <p><a href="mailto:cstrauch01@gmail.com">Email</a></p>
+            <p><a href="https://www.linkedin.com/in/collin-strauch/" target=”_blank”>LinkedIn</a></p>
+            <p><a href="../Collin.Strauch Resume.pdf" target=”_blank”>Resume</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

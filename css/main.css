@@ -216,7 +216,7 @@ a {
 }
 
 .projectPage > img {
-    height: 3vh;
+    width: 25%;
 }
 
 .projectPage > p {

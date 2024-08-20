@@ -158,15 +158,6 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-#ritButton {
-    background-color: #f76907;
-    color: black;
-}
-#uatButton {
-    background-color: #c9c9cb;
-    color: black;
-}
-
 .subsection {
     background-color: gray;
     width: 25%;
@@ -178,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2vw;
     align-items: center;
     justify-content: center;
-    margin-top: 2vh;
+    margin: 2vh;
 }
 .objective .subsection {
     width: 100%;
@@ -222,8 +213,9 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
-.subsection > h2 {
-    font-size: 180%;
+.gameBoxes {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 a {

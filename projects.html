@@ -17,7 +17,7 @@
         <p><a href="game-jams.html">Game Jams</a></p>
     </nav>
 
-    <div id="rit">
+    <div class="gameBoxes">
         <!-- <div class="subsection">
             <div class="image">
                 <img src="media/avertTitle.png" alt="avertTitle">
@@ -261,9 +261,6 @@
                 </p>
             </div>
         </div>-->
-    </div>
-
-    <div id="uat">
         <div class="subsection">
             <div class="image">
                 <a href="projects/flyingEyeing.html"><img src="media/flyingEyeing.png" alt="flyingEyeing"></a>
@@ -489,32 +486,6 @@
             <p><a href="Collin.Strauch Resume.pdf" target=”_blank”>Resume</a></p>
         </div>
     </footer>
-
-    <script>
-        function myFunctionRIT() {
-            document.getElementById("rit").hidden = false;
-            document.getElementById("uat").hidden = true;
-            document.getElementById("ritButton").disabled = true;
-            document.getElementById("uatButton").disabled = false;
-            document.getElementById("allButton").disabled = false;
-        }
-    
-        function myFunctionUAT() {
-            document.getElementById("rit").hidden = true;
-            document.getElementById("uat").hidden = false;
-            document.getElementById("ritButton").disabled = false;
-            document.getElementById("uatButton").disabled = true;
-            document.getElementById("allButton").disabled = false;
-        }
-    
-        function myFunctionAll() {
-            document.getElementById("rit").hidden = false;
-            document.getElementById("uat").hidden = false;
-            document.getElementById("ritButton").disabled = false;
-            document.getElementById("uatButton").disabled = false;
-            document.getElementById("allButton").disabled = true;
-        }
-    </script>
 </body>
 
 </html>

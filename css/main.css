@@ -17,7 +17,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 250%;
+    
 }
 
 #title {
@@ -168,10 +168,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subsection {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
+    background-color: gray;
+    width: 25%;
+    padding: 1vw;
+    display: grid;
+    grid-template-areas:
+    'image text'
+    'link link';
+    gap: 2vw;
     align-items: center;
     justify-content: center;
     margin-top: 2vh;
@@ -185,9 +189,18 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     margin-top: 2vh;
 }
+
 .image {
-    width: 40%;
+    grid-area: image;
 }
+.text {
+    grid-area: text;
+}
+.link {
+    grid-area: link;
+    text-align: center;
+}
+
 .image img {
     width: 100%;
 }
@@ -207,12 +220,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.text {
-    width: 60%;
-    padding-left: 2vw;
-    padding-right: 2vw;
 }
 
 .subsection > h2 {

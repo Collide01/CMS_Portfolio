@@ -3,10 +3,6 @@
     src: url('../pressstart2p-regular.ttf');
 }
 
-.hide {
-    display: none;
-}
-
 body {
     background-color: #000041;
     color: white;
@@ -17,7 +13,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+}
+
+a {
+    color: white;
+}
+
+.hide {
+    display: none;
 }
 
 #title {
@@ -34,12 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: press-start-2p;
     font-size: 3vw;
 }
-
 #title > p {
     padding-left: 2vw;
     padding-right: 2vw;
 }
-
 #tagline {
     filter: brightness(100%);
     filter: opacity(100%);
@@ -54,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: press-start-2p;
     font-size: 1.5vw;
 }
-
 #tagline > p {
     padding-left: 2vw;
     padding-right: 2vw;
@@ -67,44 +67,20 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     margin-top: 2vh;
 }
-
 #profile {
     width: 15%;
     margin-left: 3vw;
     margin-right: 3vw;
 }
-
 #profile > img {
     width: 100%;
     border: 3px double white;
 }
-
 #about {
     width: 60%;
     margin-left: 1vw;
     margin-right: 1vw;
     font-size: 100%;
-}
-
-.objective {
-    width: 90%;
-    margin-left: 3vw;
-    margin-right: 3vw;
-}
-
-.objectiveButtons {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-    display: inline-block;
-    padding: 15px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-}
-
-#designObjective1, #designObjective2, #designObjective3, #designObjective4, #designObjective5, #designObjective6, 
-#programmingObjective1, #programmingObjective2, #programmingObjective3, #programmingObjective4, #programmingObjective5, #programmingObjective6 {
-    display: none;
 }
 
 .navbar {
@@ -120,13 +96,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     display: flex;
 }
-
 .navbar > p {
     margin: 0;
     padding: 0;
     font-size: 90%;
 }
-
 .navbar > p a {
     display: block;
     color: white;
@@ -134,16 +108,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 .navbar > p a:hover, .active {
     background-color: #000033;
-}
-
-#buttons {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
 }
 
 .projectButtons {
@@ -158,29 +124,23 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+.gameBoxes {
+    display: flex;
+    flex-wrap: wrap;
+}
 .subsection {
     background-color: gray;
     width: 25%;
     padding: 1vw;
     display: grid;
     grid-template-areas:
-    'image text'
-    'link link';
+    'image image text'
+    'link link link';
     gap: 2vw;
     align-items: center;
     justify-content: center;
     margin: 2vh;
 }
-.objective .subsection {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2vh;
-}
-
 .image {
     grid-area: image;
 }
@@ -191,20 +151,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-area: link;
     text-align: center;
 }
-
 .image img {
     width: 100%;
 }
-
 .document {
     width: 80%;
 }
-
 .document > iframe {
     width: 100%;
     height: 75vh;
 }
-
 .video {
     margin-left: auto;
     margin-right: auto;
@@ -212,18 +168,24 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
 }
-
-.gameBoxes {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-a {
+.linkButton {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
     color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
-
-.subsection > p a {
+.linkButton a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
 }
 
 .projectPage {
@@ -231,13 +193,39 @@ a {
     margin-left: 2vw;
     margin-right: 2vw;
 }
-
 .projectPage > img {
     width: 25%;
 }
-
 .projectPage > p {
     text-align: left;
+}
+
+.objective {
+    width: 90%;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+.objective .subsection {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+.objectiveButtons {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+#designObjective1, #designObjective2, #designObjective3, #designObjective4, #designObjective5, #designObjective6, 
+#programmingObjective1, #programmingObjective2, #programmingObjective3, #programmingObjective4, #programmingObjective5, #programmingObjective6 {
+    display: none;
 }
 
 #contact {
@@ -247,14 +235,12 @@ a {
     text-align: center;
     border-top: 3px solid black;
 }
-
 .contactinfo {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
 }
-
 .contactinfo > p a {
    display: block;
    text-align: center;
@@ -262,21 +248,17 @@ a {
    background-color: #000055;
    text-decoration: none;
 }
-
 .contactinfo > p > a:link, a:visited {
     color: white;
 }
-
 .contactinfo > p > a:focus {
     color: white;
     background-color: #000033;
 }
-
 .contactinfo > p > a:hover {
     color: white;
     background-color: #000033;
 }
-
 .contactinfo > p > a:active {
     color: white;
     background-color: #000033;

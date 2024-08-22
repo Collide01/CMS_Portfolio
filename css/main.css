@@ -206,6 +206,27 @@ header {
 .projectPage > p {
     text-align: left;
 }
+.projectPageButton {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    color: white;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    font-size: 135%;;
+}
+.projectPageButton a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+}
 
 .objective {
     width: 90%;

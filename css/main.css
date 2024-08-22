@@ -174,7 +174,6 @@ header {
 }
 .linkButton {
     background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
     color: white;
     margin: 0;
@@ -257,7 +256,8 @@ header {
 }
 
 #contact {
-    margin-top: 2vw;
+    margin-top: 2vh;
+    padding-bottom: 1vh;
     background-color: lightblue;
     color: black;
     text-align: center;

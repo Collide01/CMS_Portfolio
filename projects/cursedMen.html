@@ -66,13 +66,25 @@
             listing all of the necessary information that allows for NPCs to speak in both languages. I also set 
             up a Google Spreadsheet that designers can fill out for the dialogue and then download it as a .csv 
             to import into Unreal. Then the .csv could be imported into Unreal as a data table. After that was 
-            set up, I
-            made the dialogue system so that each word can be clicked to translate between English and Spanish. 
-            If there is a word or phrase that the player doesn't know, they play a multiple choice minigame to 
-            guess the correct translation.
+            set up, I made the dialogue system so that each word can be clicked to translate between English 
+            and Spanish. If there is a word or phrase that the player doesn't know, they play a multiple choice 
+            minigame to guess the correct translation.
         </p>
         <img src="../media/cursedMenDialogueData.png" alt="cursedMenDialogueData">
         <img src="../media/cursedMenDialogue.gif" alt="cursedMenDialogue">
+
+        <p><b>Code Snippet</b>: The dialogue code parses the data from the data table by separating the 
+            words and phrases into separate data in arrays.</p>
+        <img src="../media/code/cursedMenDialogue1.png" alt="cursedMenDialogue1">
+        <img src="../media/code/cursedMenDialogue2.png" alt="cursedMenDialogue2">
+
+        <p><b>Code Snippet</b>: If the player clicks a Spanish dialogue word/phrase, the game checks to see if 
+            it has been learned or not. If not, the multiple choice starts and it randomly chooses other 
+            words and phrases in that dialogue line for the options.</p>
+            <img src="../media/code/cursedMenMultipleChoice1.png" alt="cursedMenMultipleChoice1">
+            <img src="../media/code/cursedMenMultipleChoice2.png" alt="cursedMenMultipleChoice2">
+
+        <hr>
 
         <p>The quest tool was set up at the very end of the semester. It contained tons of data that the designers 
             could fill out and it provided a general sense of what would go into the quests and how in-depth they 

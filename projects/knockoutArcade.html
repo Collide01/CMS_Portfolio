@@ -68,6 +68,79 @@
         </p>
         <iframe class="pdf" src="../media/documents/koaRushCancel.pdf"></iframe>
         <iframe class="pdf" src="../media/documents/koaSmoothCriminal.pdf"></iframe>
+
+        <hr>
+
+        <p><b>Code Snippet</b>: This function is for speed trails. It's modular so that this can be plugged 
+            into the player class whenever an action calls for it.
+        </p>
+        <pre>
+            <code>
+function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
+{
+	// For each interval of the speed timer.
+	if (speedTrailTimer >= interval)
+	{
+		speedTrailTimer = 0;
+		object_set_sprite(oSpeedTrail, sprite_index);
+		var speedTrailInstance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+		
+		with (speedTrailInstance)
+		{
+			image_index = other.image_index;
+			
+			image_xscale = other.image_xscale;
+			
+			// Set up the palette data for the speed trail
+			if (array_length(other.selectedCharacter.BasePalette) > 0)
+			{
+				hasColorPalettes = true;
+				if (other.playerID == 1)
+				{
+					PaletteSetup(global.p1PaletteID, other.selectedCharacter);
+				}
+				else
+				{
+					PaletteSetup(global.p2PaletteID, other.selectedCharacter);
+				}
+			}
+			else
+			{
+				hasColorPalettes = false;
+			}
+			
+			// Initialize variables
+			startingOpacity = setStartingOpacity;
+			fadeSpeed = setFadeSpeed;
+			initialized = true;
+		}
+	}
+	
+	// Increment the speed trail timer
+	speedTrailTimer++;
+}
+            </code>
+        </pre>
+        <p>The speedTrailInstance refers to the oSpeedTrail object class. Here is its Step function.</p>
+        <pre>
+            <code>
+if (!initialized)
+{
+	image_alpha = startingOpacity;
+}
+else 
+{
+	// Fade the sprite
+	image_alpha = clamp(image_alpha - fadeSpeed, 0, 1);
+	
+	// Destroy the sprite once completely invisible
+	if (image_alpha <= 0)
+	{
+		instance_destroy();
+	}
+}
+            </code>
+        </pre>
         
         <hr>
 
@@ -91,6 +164,79 @@
 
         <hr>
 
+        <p><b>Code Snippet</b>: This is for the character editor. Most of my contributions to it build off of 
+            preexisting code and I copied the format. For example, here is the data model for super attacks.
+        </p>
+        <pre>
+            <code>
+using CharacterDataEditor.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CharacterDataEditor.Models.CharacterData
+{
+    public class SuperDataModel
+    {
+        // Values that will be used for this move. These will be set by designers.
+        public SuperType Type { get; set; } = SuperType.Attack; // Set the type of super attack; attack, or install
+        public int ScreenFreezeTime { get; set; } = 0; // Number of frames the screen freezes for upon activation
+        public int InvincibilityFrames { get; set; } = 0; // Number of invincibility frames upon activation
+        public bool FinalBlowKO { get; set; } = false; // This is mainly used for multi-hitting supers. This determines if only the final hit will KO the opponent.
+        public int Duration { get; set; } = 0; // This is for install supers, which are basically transformations
+        public float IncreaseAttackBy { get; set; } = 0.0f; // Install data; increases attack power by a percent
+        public float IncreaseSpeedBy { get; set; } = 0.0f; // Install data; increases movement speed by a percent
+        public JumpType JumpType { get; set; } = JumpType.None; // Install data; gives the player a special type of jumping ability; double jump, super jump, or short hop
+        public bool SpiritInstall { get; set; } = false; // Install data; activates a very specific type of install utilizing another mechanic called Spirits
+
+        // All of the above data is organized and compiled into a JSON format to be imported into the game
+        public override int GetHashCode()
+        {
+            var hash = HashCode.Combine(Type, ScreenFreezeTime, InvincibilityFrames, FinalBlowKO, Duration, IncreaseAttackBy, IncreaseSpeedBy, JumpType);
+            hash = HashCode.Combine(hash, SpiritInstall);
+
+            return hash;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (obj.GetType() != typeof(SuperDataModel))
+            {
+                return false;
+            }
+
+            var objAsSuperData = obj as SuperDataModel;
+
+            // Ensures that all data types are correct across character editor versions so data doesn't corrupt
+            if (objAsSuperData.Type.Equals(Type) &&
+                 objAsSuperData.ScreenFreezeTime.Equals(ScreenFreezeTime) &&
+                 objAsSuperData.InvincibilityFrames.Equals(InvincibilityFrames) &&
+                 objAsSuperData.FinalBlowKO.Equals(FinalBlowKO) &&
+                 objAsSuperData.Duration.Equals(Duration) &&
+                 objAsSuperData.IncreaseAttackBy.Equals(IncreaseAttackBy) &&
+                 objAsSuperData.IncreaseSpeedBy.Equals(IncreaseSpeedBy) &&
+                 objAsSuperData.JumpType.Equals(JumpType) &&
+                 objAsSuperData.SpiritInstall.Equals(SpiritInstall))
+            {
+                return true;
+            }
+
+            return false;
+        }
+    }
+}
+            </code>
+        </pre>
+
+        <hr>
+
         <p>I also made a few trailers for this game. They weren't part of my tasks, but I just wanted to make 
             them because I was that passionate about this project. This was my first 
             time learning about video creation and editing. I used Adobe After Effects for these. In retrospect, 
@@ -104,7 +250,6 @@
             <source src="../media/videos/koaGameTrailer.mp4" type="video/mp4">
             Your browser does not support HTML video.
         </video>
-
     </div>
 
     <footer id="contact">

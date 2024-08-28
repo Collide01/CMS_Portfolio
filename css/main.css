@@ -226,6 +226,12 @@ header {
     text-decoration: none;
     display: block;
 }
+pre code {
+    background-color: #202020;
+    border: 1px solid #999;
+    display: block;
+    padding-left: 20px;
+}
 
 .objective {
     width: 90%;

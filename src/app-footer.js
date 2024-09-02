@@ -207,7 +207,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
     <div class="fcf-body">
       <div id="fcf-form">
-        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="src/contact-form-process.php">
   
           <div class="fcf-form-group">
               <label for="Name" class="fcf-label">Your name</label>

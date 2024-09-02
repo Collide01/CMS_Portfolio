@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Collin's Portfolio | About Me</title>
+    <link rel="icon" href="media/logo.png">
+    <script type="module" src="src/webcomp-loader.js"></script>
+
+    <style>
+        header {
+            background-color: black;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url(media/title.png);
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    </style>
+</head>
+
+<body>
+    <app-navbar data-name="HOME"></app-navbar>
+
+    <header id="titlePage">
+        <div id="title">
+            <p>Collin Strauch</p>
+        </div>
+        <div id="tagline">
+            <p>Passionate for Programming</p>
+        </div>
+    </header>
+
+    <div id="about-text">
+        <div id="profile">
+            <img src="media/Collin.jpg" alt="Collin">
+        </div>
+        <p id="about">Hello! My name is Collin Strauch. 
+            I have a passion for coding and programming video games. 
+            By combining my logical thinking with my creativity, I am able to create amazing things.
+        </p>
+    </div>
+
+    <br>
+    <h2 style="text-align: center;"><u>Some of my favorite work</u></h2>
+
+    <div class="gameBoxes">
+        <div class="subsection">
+            <div class="image">
+                <img src="media/koaTitle.png" alt="koa">
+                <img src="media/koaGameplay.png" alt="koaGameplay">
+            </div>
+            <div class="text">
+                <h2>Knock-Out Arcade</h2>
+                <p><u>Role</u>: Gameplay Programmer/Software Engineer</p>
+                <p><u>Platform</u>: PC</p>
+                <p><u>Software</u>: Game Maker Studio 2, Visual Studio, Adobe After Effects, Trello</p>
+            </div>
+            <div class="link">
+                <button class="linkButton"><a href="projects/knockoutArcade.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection">
+            <div class="image">
+                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle">
+                <img src="media/cursedMen.png" alt="cursedMen">
+            </div>
+            <div class="text">
+                <h2>The Cursed Men and The Stolen Princess</h2>
+                <p><u>Role</u>: Systems Programmer, Repository Manager</p>
+                <p><u>Platform</u>: PC</p>
+                <p><u>Software</u>: Unreal, Trello</p>
+            </div>
+            <div class="link">
+                <button class="linkButton"><a href="projects/cursedMen.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection">
+            <div class="image">
+                <img src="media/zeldaDiscovery1.png" alt="discovery1">
+                <img src="media/zeldaDiscovery2.png" alt="discovery2">
+            </div>
+            <div class="text">
+                <h2>Discovery</h2>
+                <p><u>Role</u>: Independent</p>
+                <p><u>Platform</u>: PC</p>
+                <p><u>Software</u>: ZQuest</p>
+            </div>
+            <div class="link">
+                <button class="linkButton"><a href="projects/discovery.html">Read More</a></button>
+            </div>
+        </div>
+    </div>
+
+    <app-footer data-year="2024" data-text="Collin Strauch"></app-footer>
+</body>
+
+</html>

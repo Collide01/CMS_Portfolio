@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Collin's Portfolio | About Me</title>
     <link rel="icon" href="media/logo.png">
+    <script type="module" src="src/webcomp-loader.js"></script>
 
     <style>
         header {
@@ -28,6 +29,8 @@
 </head>
 
 <body>
+    <app-navbar data-name="HOME"></app-navbar>
+
     <header id="titlePage">
         <div id="title">
             <p>Collin Strauch</p>
@@ -36,13 +39,6 @@
             <p>Passionate for Programming</p>
         </div>
     </header>
-
-    <nav class="navbar">
-        <p><a class="active" href="#">Home</a></p>
-        <p><a href="personal.html">Personal Projects</a></p>
-        <p><a href="projects.html">Class Projects</a></p>
-        <p><a href="game-jams.html">Game Jams</a></p>
-    </nav>
 
     <div id="about-text">
         <div id="profile">

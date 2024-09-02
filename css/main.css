@@ -8,7 +8,7 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    padding-top: 48px;
+    padding-top: 3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,35 +84,6 @@ header {
     margin-left: 1vw;
     margin-right: 1vw;
     font-size: 100%;
-}
-
-.navbar {
-    filter: brightness(100%);
-    filter: opacity(100%);
-    list-style-type: none;
-    margin: 0;
-    padding-bottom: 0;
-    background-color: #000055;
-    border-bottom: 4px solid black;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-}
-.navbar > p {
-    margin: 0;
-    padding: 0;
-    font-size: 90%;
-}
-.navbar > p a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.navbar > p a:hover, .active {
-    background-color: #000033;
 }
 
 .projectButtons {
@@ -305,10 +276,6 @@ pre code {
 
     h1 {
         text-decoration: underline;
-    }
-
-    body {
-        padding-top: 40px;
     }
 
     header {

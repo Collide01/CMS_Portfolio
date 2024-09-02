@@ -23,7 +23,7 @@ template.innerHTML = `
     <!-- logo / page name -->
     <div class="navbar-brand">
       <a class="navbar-item" href="index.html">
-        <img src="./media/logo.png" alt="site logo">
+        <img src="" alt="site logo">
       </a>
       <app-header data-name=" " id="header-name"></app-header>
       <a class="has-text-white-ter navbar-burger" id="burger">
@@ -56,9 +56,52 @@ class AppNavbar extends HTMLElement{
 
       // grab the attribute values, and assign a default value if necessary
       const name = this.getAttribute('data-name') ? this.getAttribute('data-name') : "Unknown";
+      const projectPage = this.getAttribute('data-projectPage') ? this.getAttribute('data-projectPage') : false;
 
       this.burger = this.shadowRoot.querySelector("#burger");
       this.navbarMenu = this.shadowRoot.querySelector("#nav-links");
+
+      // Change the link paths depending on the page
+      if (!projectPage) {
+        this.shadowRoot.querySelector(".navbar-brand").innerHTML = `
+          <a class="navbar-item" href="index.html">
+            <img src="./media/logo.png" alt="site logo">
+          </a>
+          <app-header data-name=" " id="header-name"></app-header>
+          <a class="has-text-white-ter navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        `;
+        this.shadowRoot.querySelector(".navbar-end").innerHTML = `
+          <a class="navbar-item has-text-white-ter" href="index.html" id="index">Home</a>
+          <a class="navbar-item has-text-white-ter" href="personal.html" id="personal">Personal Projects</a>
+          <a class="navbar-item has-text-white-ter" href="projects.html" id="projects">Class Projects</a>
+          <a class="navbar-item has-text-white-ter" href="game-jams.html" id="gameJams">Game Jams</a>
+        `;
+      }
+      else {
+        this.shadowRoot.querySelector(".navbar-brand").innerHTML = `
+          <a class="navbar-item" href="../index.html">
+            <img src="../media/logo.png" alt="site logo">
+          </a>
+          <app-header data-name=" " id="header-name"></app-header>
+          <a class="has-text-white-ter navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        `;
+        this.shadowRoot.querySelector(".navbar-end").innerHTML = `
+          <a class="navbar-item has-text-white-ter" href="../index.html" id="index">Home</a>
+          <a class="navbar-item has-text-white-ter" href="../personal.html" id="personal">Personal Projects</a>
+          <a class="navbar-item has-text-white-ter" href="../projects.html" id="projects">Class Projects</a>
+          <a class="navbar-item has-text-white-ter" href="../game-jams.html" id="gameJams">Game Jams</a>
+        `;
+      }
 
       if (name == "HOME") {
         this.shadowRoot.querySelector("#index").style.backgroundColor = "#000041";

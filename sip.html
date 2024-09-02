@@ -7,17 +7,11 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Collin's Portfolio | SIP</title>
     <link rel="icon" href="media/logo.png">
+    <script type="module" src="src/webcomp-loader.js"></script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <p><a href="index.html">Home</a></p>
-        <p><a href="personal.html">Personal Projects</a></p>
-        <p><a href="projects.html">Class Projects</a></p>
-        <p><a href="game-jams.html">Game Jams</a></p>
-        <p><a class="active" href="#">SIP</a></p>
-        <p><a href="objectives.html">UAT Objectives</a></p>
-    </nav>
+    <app-navbar data-name="" data-projectPage="false"></app-navbar>
 
     <div class="video">
         <video width="40%" controls>
@@ -42,15 +36,7 @@
         </div>
     </div>
 
-    <footer id="contact">
-        <h1>Contact</h1>
-        <div class="contactinfo">
-            <p><a href="mailto:cstrauch01@gmail.com">Email</a></p>
-            <p><a href="https://www.linkedin.com/in/collin-strauch/" target=”_blank”>LinkedIn</a></p>
-            <p><a href="Collin.Strauch Resume.pdf" target=”_blank”>Resume</a></p>
-        </div>
-        <h2>&copy; 2024 Collin Strauch</h2>
-    </footer>
+    <app-footer data-year="2024"></app-footer>
 </body>
 
 </html>

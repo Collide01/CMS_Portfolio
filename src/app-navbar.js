@@ -23,7 +23,7 @@ template.innerHTML = `
     <!-- logo / page name -->
     <div class="navbar-brand">
       <a class="navbar-item" href="index.html">
-        <img src="" alt="site logo">
+        <img src="media/logo.png" alt="site logo">
       </a>
       <app-header data-name=" " id="header-name"></app-header>
       <a class="has-text-white-ter navbar-burger" id="burger">
@@ -62,27 +62,7 @@ class AppNavbar extends HTMLElement{
       this.navbarMenu = this.shadowRoot.querySelector("#nav-links");
 
       // Change the link paths depending on the page
-      if (projectPage == "false") {
-        this.shadowRoot.querySelector(".navbar-brand").innerHTML = `
-          <a class="navbar-item" href="index.html">
-            <img src="./media/logo.png" alt="site logo">
-          </a>
-          <app-header data-name=" " id="header-name"></app-header>
-          <a class="has-text-white-ter navbar-burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-        `;
-        this.shadowRoot.querySelector(".navbar-end").innerHTML = `
-          <a class="navbar-item has-text-white-ter" href="index.html" id="index">Home</a>
-          <a class="navbar-item has-text-white-ter" href="personal.html" id="personal">Personal Projects</a>
-          <a class="navbar-item has-text-white-ter" href="projects.html" id="projects">Class Projects</a>
-          <a class="navbar-item has-text-white-ter" href="game-jams.html" id="gameJams">Game Jams</a>
-        `;
-      }
-      else {
+      if (projectPage == "true") {
         this.shadowRoot.querySelector(".navbar-brand").innerHTML = `
           <a class="navbar-item" href="../index.html">
             <img src="../media/logo.png" alt="site logo">

@@ -56,13 +56,13 @@ class AppNavbar extends HTMLElement{
 
       // grab the attribute values, and assign a default value if necessary
       const name = this.getAttribute('data-name') ? this.getAttribute('data-name') : "Unknown";
-      const projectPage = this.getAttribute('data-projectPage') ? this.getAttribute('data-projectPage') : false;
+      const projectPage = this.getAttribute('data-projectPage') ? this.getAttribute('data-projectPage') : "false";
 
       this.burger = this.shadowRoot.querySelector("#burger");
       this.navbarMenu = this.shadowRoot.querySelector("#nav-links");
 
       // Change the link paths depending on the page
-      if (!projectPage) {
+      if (projectPage == "false") {
         this.shadowRoot.querySelector(".navbar-brand").innerHTML = `
           <a class="navbar-item" href="index.html">
             <img src="./media/logo.png" alt="site logo">

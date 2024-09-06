@@ -8,6 +8,7 @@ template.innerHTML = `
     color: black;
     text-align: center;
     border-top: 3px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .contactinfo {
     width: 100%;

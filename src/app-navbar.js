@@ -7,6 +7,7 @@ template.innerHTML = `
     background-size: cover;
     height: 3rem;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   #nav-links {
     color: white;

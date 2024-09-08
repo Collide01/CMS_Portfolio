@@ -116,6 +116,12 @@ header {
     justify-content: center;
     margin: 2vh;
 }
+.favorite {
+    background-color: gray;
+    width: 100%;
+    padding: 1vw;
+    margin: 2vh;
+}
 .image {
     grid-area: image;
 }
@@ -128,6 +134,18 @@ header {
 }
 .image img {
     width: 100%;
+}
+.favorite .info {
+    display: flex;
+    margin-bottom: 1vw;
+}
+.favorite .info img {
+    width: auto;
+    height: 20rem;
+}
+.favorite .info .text {
+    margin-left: 1vw;
+    margin-top: -1vw;
 }
 .document {
     width: 80%;
@@ -267,16 +285,29 @@ pre code {
     color: white;
     background-color: #000033;
   }
+
+@media only screen and (max-width:1023px) {
+    .favorite {
+        background-color: gray;
+        width: 100%;
+        padding: 1vw;
+        margin: 2vh;
+    }
+    .favorite .info {
+        display: inline;
+        margin-bottom: 1vw;
+    }
+    .favorite .info img {
+        width: auto;
+        height: 20rem;
+    }
+    .favorite .info .text {
+        margin-left: 1vw;
+        margin-top: -1vw;
+    }
+}
   
 @media only screen and (max-width:769px) {
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 200%;
-    }
-
-    h1 {
-        text-decoration: underline;
-    }
-
     header {
         margin-bottom: 2vh;
     }
@@ -286,7 +317,7 @@ pre code {
     }
 
     #tagline {
-        font-size: 90%;
+        font-size: 70%;
     }
 
     #about-text {

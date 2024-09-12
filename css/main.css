@@ -297,10 +297,6 @@ pre code {
         display: inline;
         margin-bottom: 1vw;
     }
-    .favorite .info img {
-        width: auto;
-        height: 20rem;
-    }
     .favorite .info .text {
         margin-left: 1vw;
         margin-top: -1vw;
@@ -344,6 +340,11 @@ pre code {
     .subsection img {
         display: block;
         width: 90%;
+    }
+
+    .favorite .info img {
+        width: 100%;
+        height: auto;
     }
 
     .projectPage > img {

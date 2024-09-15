@@ -105,45 +105,25 @@ header {
 }
 .subsection {
     background-color: gray;
-    width: 380px;
-    padding: 1vw;
-    display: grid;
-    grid-template-areas:
-    'image image text'
-    'link link link';
-    gap: 2vw;
-    align-items: center;
-    justify-content: center;
-    margin: 2vh;
-}
-.favorite {
-    background-color: gray;
     width: 100%;
     padding: 1vw;
     margin: 2vh;
 }
-.image {
-    grid-area: image;
-}
-.text {
-    grid-area: text;
-}
 .link {
-    grid-area: link;
     text-align: center;
 }
 .image img {
     width: 100%;
 }
-.favorite .info {
+.subsection .info {
     display: flex;
     margin-bottom: 1vw;
 }
-.favorite .info img {
+.subsection .info img {
     width: auto;
     height: 20rem;
 }
-.favorite .info .text {
+.subsection .info .text {
     margin-left: 1vw;
     margin-top: -1vw;
 }
@@ -287,17 +267,17 @@ pre code {
   }
 
 @media only screen and (max-width:1023px) {
-    .favorite {
+    .subsection {
         background-color: gray;
         width: 100%;
         padding: 1vw;
         margin: 2vh;
     }
-    .favorite .info {
+    .subsection .info {
         display: inline;
         margin-bottom: 1vw;
     }
-    .favorite .info .text {
+    .subsection .info .text {
         margin-left: 1vw;
         margin-top: -1vw;
     }
@@ -342,7 +322,7 @@ pre code {
         width: 90%;
     }
 
-    .favorite .info img {
+    .subsection .info img {
         width: 100%;
         height: auto;
     }

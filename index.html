@@ -56,9 +56,9 @@
     <h2 style="text-align: center;"><u>Some of my favorite work</u></h2>
 
     <div class="gameBoxes">
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('koaImage', 'media/gifs/koaGameplay.gif')" onmouseleave="changeImage('koaImage', 'media/koaTitle.png')">
             <div class="info">
-                <img src="media/koaTitle.png" alt="koa">
+                <img src="media/koaTitle.png" alt="koa" id="koaImage">
                 <div class="text">
                     <h1>Knock-Out Arcade</h1>
                     <h3>A 2D fighting game started by a friend as a personal project and was later pitched to a production 
@@ -81,15 +81,15 @@
                 <button class="linkButton"><a href="projects/knockoutArcade.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('cursedMenImage', 'media/gifs/cursedMenGameplay.gif')" onmouseleave="changeImage('cursedMenImage', 'media/cursedMenTitle.jpg')">
             <div class="info">
-                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle">
+                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle" id="cursedMenImage">
                 <div class="text">
                     <h1>The Cursed Men and The Stolen Princess</h1>
                     <h3>A 2.5D Language-Learning RPG started by a friend as a personal project and was later pitched to a production 
                         studio to formally onboard others onto the project for 15 weeks.
                     </h3>
-                    <p><u>Role</u>: Systems Programmer, Repository Manager
+                    <p><u>Role</u>: Game Programmer, Repository Manager
                     <br><u>Software</u>: Unreal, Trello</p>
                     <ul>
                         <li>Programmed a unique dialogue system that allows users to click words/phrases and translate them between English and Spanish</li>
@@ -104,9 +104,9 @@
                 <button class="linkButton"><a href="projects/cursedMen.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('discoveryImage', 'media/gifs/zeldaDiscoveryGameplay.gif')" onmouseleave="changeImage('discoveryImage', 'media/zeldaDiscovery1.png')">
             <div class="info">
-                <img src="media/zeldaDiscovery1.png" alt="discovery1">
+                <img src="media/zeldaDiscovery1.png" alt="discovery1" id="discoveryImage">
                 <div class="text">
                     <h1>Discovery</h1>
                     <h3>A Zelda quest on a similar scale to the original Legend of Zelda. Was supposed to be a level design 
@@ -132,5 +132,11 @@
 
     <app-footer data-year="2024"></app-footer>
 </body>
+
+<script>
+    function changeImage(elementID, imageName) {
+        document.getElementById(elementID).src = imageName;
+    }
+</script>
 
 </html>

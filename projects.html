@@ -14,9 +14,10 @@
     <app-navbar data-name="PROJECTS" data-projectPage="false"></app-navbar>
 
     <div class="gameBoxes">
-        <div class="subsection" onmouseenter="changeImage('spaceInvadersImage', 'media/gifs/spaceInvadersGameplay.gif')" onmouseleave="changeImage('spaceInvadersImage', 'media/spaceInvadersTitle.png')">
+        <div class="subsection" onmouseenter="changeImage('spaceInvadersImage1', 'spaceInvadersImage2', true)" onmouseleave="changeImage('spaceInvadersImage1', 'spaceInvadersImage2', false)">
             <div class="info">
-                <img src="media/spaceInvadersTitle.png" alt="spaceInvadersTitle" id="spaceInvadersImage">
+                <img src="media/spaceInvadersTitle.png" alt="spaceInvadersTitle" id="spaceInvadersImage1">
+                <img src="media/gifs/spaceInvadersGameplay.gif" alt="spaceInvadersGameplay" id="spaceInvadersImage2">
                 <div class="text">
                     <h1>Space Invaders: The Bizarro Dimension</h1>
                     <h3>A unique spin on the classic game, developed in 2 weeks.
@@ -85,9 +86,10 @@
                 </p>
             </div>
         </div> -->
-        <div class="subsection" onmouseenter="changeImage('vitaminImage', 'media/gifs/vitaminGameplay.gif')" onmouseleave="changeImage('vitaminImage', 'media/vitamin.png')">
+        <div class="subsection" onmouseenter="changeImage('vitaminImage1', 'vitaminImage2', true)" onmouseleave="changeImage('vitaminImage1', 'vitaminImage2', false)">
             <div class="info">
-                <img src="media/vitamin.png" alt="vitamin" id="vitaminImage">
+                <img src="media/vitamin.png" alt="vitamin" id="vitaminImage1">
+                <img src="media/gifs/vitaminGameplay.gif" alt="vitaminGameplay" id="vitaminImage2">
                 <div class="text">
                     <h1>Vitamin Deficiency</h1>
                     <h3>A top-down rougelike where a farmer fights vegetable monsters.
@@ -137,9 +139,10 @@
                 </p>
             </div>
         </div>-->
-        <div class="subsection" onmouseenter="changeImage('flowOfTimeImage', 'media/gifs/flowOfTimeGameplay.gif')" onmouseleave="changeImage('flowOfTimeImage', 'media/theFlowOfTime.png')">
+        <div class="subsection" onmouseenter="changeImage('flowOfTimeImage1', 'flowOfTimeImage2', true)" onmouseleave="changeImage('flowOfTimeImage1', 'flowOfTimeImage2', false)">
             <div class="info">
-                <img src="media/theFlowOfTime.png" alt="flowOfTime" id="flowOfTimeImage">
+                <img src="media/theFlowOfTime.png" alt="flowOfTime" id="flowOfTimeImage1">
+                <img src="media/gifs/flowOfTimeGameplay.gif" alt="flowOfTimeGameplay" id="flowOfTimeImage2">
                 <div class="text">
                     <h1>The Flow of Time</h1>
                     <h3>A quick top-down shooter with a time manipulation mechanic. Defeat the boss in 10 seconds or lose!
@@ -158,9 +161,10 @@
                 <button class="linkButton"><a href="projects/flowOfTime.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection" onmouseenter="changeImage('blindJumpingImage', 'media/gifs/blindJumpingGameplay.gif')" onmouseleave="changeImage('blindJumpingImage', 'media/blindJumping.png')">
+        <div class="subsection" onmouseenter="changeImage('blindJumpingImage1', 'blindJumpingImage2', true)" onmouseleave="changeImage('blindJumpingImage1', 'blindJumpingImage2', false)">
             <div class="info">
-                <img src="media/blindJumping.png" alt="blindJumping" id="blindJumpingImage">
+                <img src="media/blindJumping.png" alt="blindJumping" id="blindJumpingImage1">
+                <img src="media/gifs/blindJumpingGameplay.gif" alt="blindJumpingGameplay" id="blindJumpingImage2">
                 <div class="text">
                     <h1>Blind Jumping</h1>
                     <h3>A 3D horror platformer where vision is obscured and the player must navigate with sound.
@@ -222,9 +226,10 @@
                 <button class="linkButton"><a href="projects/wizzrobeWonders.html">Read More</a></button>
             </div>
         </div> -->
-        <div class="subsection" onmouseenter="changeImage('discoveryImage', 'media/gifs/zeldaDiscoveryGameplay.gif')" onmouseleave="changeImage('discoveryImage', 'media/zeldaDiscovery1.png')">
+        <div class="subsection" onmouseenter="changeImage('discoveryImage1', 'discoveryImage2', true)" onmouseleave="changeImage('discoveryImage1', 'discoveryImage2', false)">
             <div class="info">
-                <img src="media/zeldaDiscovery1.png" alt="discovery1" id="discoveryImage">
+                <img src="media/zeldaDiscovery1.png" alt="discovery1" id="discoveryImage1">
+                <img src="media/gifs/zeldaDiscoveryGameplay.gif" alt="discoveryGameplay" id="discoveryImage2">
                 <div class="text">
                     <h1>Discovery</h1>
                     <h3>A Zelda quest on a similar scale to the original Legend of Zelda. Was supposed to be a level design 
@@ -252,8 +257,32 @@
 </body>
 
 <script>
-    function changeImage(elementID, imageName) {
-        document.getElementById(elementID).src = imageName;
+    let element1;
+    let element2;
+
+    window.onload = () => {
+        changeImage('spaceInvadersImage1', 'spaceInvadersImage2', false);
+        changeImage('vitaminImage1', 'vitaminImage2', false);
+        changeImage('flowOfTimeImage1', 'flowOfTimeImage2', false);
+        changeImage('blindJumpingImage1', 'blindJumpingImage2', false);
+        changeImage('discoveryImage1', 'discoveryImage2', false);
+    }
+
+    function changeImage(elementID1, elementID2, hovering) {
+        element1 = document.getElementById(elementID1);
+        element2 = document.getElementById(elementID2);
+
+        if (hovering) {
+            element1.style.display = 'none'; 
+            element2.style.display = 'inline'; 
+            setTimeout(() => {
+                element2.src = element2.src;
+            }, 0);
+        }
+        else {
+            element1.style.display = 'inline'; 
+            element2.style.display = 'none'; 
+        }
     }
 </script>
 

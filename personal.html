@@ -14,9 +14,10 @@
     <app-navbar data-name="PERSONAL" data-projectPage="false"></app-navbar>
 
     <div class="gameBoxes">
-        <div class="subsection" onmouseenter="changeImage('koaImage', 'media/gifs/koaGameplay.gif')" onmouseleave="changeImage('koaImage', 'media/koaTitle.png')">
+        <div class="subsection" onmouseenter="changeImage('koaImage1', 'koaImage2', true)" onmouseleave="changeImage('koaImage1', 'koaImage2', false)">
             <div class="info">
-                <img src="media/koaTitle.png" alt="koa" id="koaImage">
+                <img src="media/koaTitle.png" alt="koa" id="koaImage1">
+                <img src="media/gifs/koaGameplay.gif" alt="koaGameplay" id="koaImage2">
                 <div class="text">
                     <h1>Knock-Out Arcade</h1>
                     <h3>A 2D fighting game started by a friend as a personal project and was later pitched to a production 
@@ -40,9 +41,10 @@
             </div>
         </div>
 
-        <div class="subsection" onmouseenter="changeImage('cursedMenImage', 'media/gifs/cursedMenGameplay.gif')" onmouseleave="changeImage('cursedMenImage', 'media/cursedMenTitle.jpg')">
+        <div class="subsection" onmouseenter="changeImage('cursedMenImage1', 'cursedMenImage2', true)" onmouseleave="changeImage('cursedMenImage1', 'cursedMenImage2', false)">
             <div class="info">
-                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle" id="cursedMenImage">
+                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle" id="cursedMenImage1">
+                <img src="media/gifs/cursedMenGameplay.gif" alt="cursedMenGameplay" id="cursedMenImage2">
                 <div class="text">
                     <h1>The Cursed Men and The Stolen Princess</h1>
                     <h3>A 2.5D Language-Learning RPG started by a friend as a personal project and was later pitched to a production 
@@ -69,8 +71,29 @@
 </body>
 
 <script>
-    function changeImage(elementID, imageName) {
-        document.getElementById(elementID).src = imageName;
+    let element1;
+    let element2;
+
+    window.onload = () => {
+        changeImage('koaImage1', 'koaImage2', false);
+        changeImage('cursedMenImage1', 'cursedMenImage2', false);
+    }
+
+    function changeImage(elementID1, elementID2, hovering) {
+        element1 = document.getElementById(elementID1);
+        element2 = document.getElementById(elementID2);
+
+        if (hovering) {
+            element1.style.display = 'none'; 
+            element2.style.display = 'inline'; 
+            setTimeout(() => {
+                element2.src = element2.src;
+            }, 0);
+        }
+        else {
+            element1.style.display = 'inline'; 
+            element2.style.display = 'none'; 
+        }
     }
 </script>
 

@@ -14,9 +14,9 @@
     <app-navbar data-name="PERSONAL" data-projectPage="false"></app-navbar>
 
     <div class="gameBoxes">
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('koaImage', 'media/gifs/koaGameplay.gif')" onmouseleave="changeImage('koaImage', 'media/koaTitle.png')">
             <div class="info">
-                <img src="media/koaTitle.png" alt="koa">
+                <img src="media/koaTitle.png" alt="koa" id="koaImage">
                 <div class="text">
                     <h1>Knock-Out Arcade</h1>
                     <h3>A 2D fighting game started by a friend as a personal project and was later pitched to a production 
@@ -40,9 +40,9 @@
             </div>
         </div>
 
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('cursedMenImage', 'media/gifs/cursedMenGameplay.gif')" onmouseleave="changeImage('cursedMenImage', 'media/cursedMenTitle.jpg')">
             <div class="info">
-                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle">
+                <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle" id="cursedMenImage">
                 <div class="text">
                     <h1>The Cursed Men and The Stolen Princess</h1>
                     <h3>A 2.5D Language-Learning RPG started by a friend as a personal project and was later pitched to a production 
@@ -67,5 +67,11 @@
 
     <app-footer data-year="2024"></app-footer>
 </body>
+
+<script>
+    function changeImage(elementID, imageName) {
+        document.getElementById(elementID).src = imageName;
+    }
+</script>
 
 </html>

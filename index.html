@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body>
+<body onload="overallButton()">
     <app-navbar data-name="HOME" data-projectPage="false"></app-navbar>
 
     <header id="titlePage">
@@ -55,8 +55,57 @@
     <br>
     <h2 style="text-align: center;"><u>Some of my favorite work</u></h2>
 
+    <div id="titleButtons">
+        <label>
+            <input
+                type="radio"
+                name="display"
+                value="Overall"
+                checked
+                onchange="overallButton()"
+            />
+            <span>Overall</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="display"
+                value="GameDesign"
+                onchange="gameDesignButton()"
+            />
+            <span>Game Design</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="display"
+                value="GameProgramming"
+                onchange="gameProgrammingButton()"
+            />
+            <span>Game Programming</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="display"
+                value="Unity"
+                onchange="unityButton()"
+            />
+            <span>Unity</span>
+        </label>
+        <label>
+            <input
+                type="radio"
+                name="display"
+                value="Unreal"
+                onchange="unrealButton()"
+            />
+            <span>Unreal</span>
+        </label>
+    </div>
+
     <div class="gameBoxes">
-        <div class="subsection" onmouseenter="changeImage('koaImage', 'media/gifs/koaGameplay.gif')" onmouseleave="changeImage('koaImage', 'media/koaTitle.png')">
+        <div class="subsection overall programming" onmouseenter="changeImage('koaImage', 'media/gifs/koaGameplay.gif')" onmouseleave="changeImage('koaImage', 'media/koaTitle.png')">
             <div class="info">
                 <img src="media/koaTitle.png" alt="koa" id="koaImage">
                 <div class="text">
@@ -81,7 +130,7 @@
                 <button class="linkButton"><a href="projects/knockoutArcade.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection" onmouseenter="changeImage('cursedMenImage', 'media/gifs/cursedMenGameplay.gif')" onmouseleave="changeImage('cursedMenImage', 'media/cursedMenTitle.jpg')">
+        <div class="subsection overall programming unreal" onmouseenter="changeImage('cursedMenImage', 'media/gifs/cursedMenGameplay.gif')" onmouseleave="changeImage('cursedMenImage', 'media/cursedMenTitle.jpg')">
             <div class="info">
                 <img src="media/cursedMenTitle.jpg" alt="cursedMenTitle" id="cursedMenImage">
                 <div class="text">
@@ -104,7 +153,7 @@
                 <button class="linkButton"><a href="projects/cursedMen.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection" onmouseenter="changeImage('discoveryImage', 'media/gifs/zeldaDiscoveryGameplay.gif')" onmouseleave="changeImage('discoveryImage', 'media/zeldaDiscovery1.png')">
+        <div class="subsection overall design" onmouseenter="changeImage('discoveryImage', 'media/gifs/zeldaDiscoveryGameplay.gif')" onmouseleave="changeImage('discoveryImage', 'media/zeldaDiscovery1.png')">
             <div class="info">
                 <img src="media/zeldaDiscovery1.png" alt="discovery1" id="discoveryImage">
                 <div class="text">
@@ -128,14 +177,188 @@
                 <button class="linkButton"><a href="projects/discovery.html">Read More</a></button>
             </div>
         </div>
+        <div class="subsection design">
+            <div class="info">
+                <img src="media/honorsTitle.png" alt="honorsTitle">
+                <div class="text">
+                    <h1>Honors for Valor</h1>
+                    <h3>A military-themed deck-building card game, designed for the UAT Veterans Day Game Jam in November 2023.
+                    </h3>
+                    <p><u>Role</u>: Co-Designer
+                    <br><u>Software</u>: Photoshop, Trello</p>
+                    <ul>
+                        <li>Helped design the overall game flow and game balance</li>
+                        <li>Discussed implications of game mechanics to ensure we respect the military and what they do</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/honorsForValor.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection design unity" onmouseenter="changeImage('blindJumpingImage', 'media/gifs/blindJumpingGameplay.gif')" onmouseleave="changeImage('blindJumpingImage', 'media/blindJumping.png')">
+            <div class="info">
+                <img src="media/blindJumping.png" alt="blindJumping" id="blindJumpingImage">
+                <div class="text">
+                    <h1>Blind Jumping</h1>
+                    <h3>A 3D horror platformer where vision is obscured and the player must navigate with sound.
+                    </h3>
+                    <p><u>Role</u>: Main Programmer, Level Designer
+                    <br><u>Software</u>: Unity, Trello</p>
+                    <ul>
+                        <li>Utilized Unity's 3D sound features to help players navigate by following the direction they hear sounds from</li>
+                        <li>Designed a long level to move through over the course of multiple sprints in agile development</li>
+                        <li>Implemented enemies that enhance the horror aspect by causing heartbeats, making footprint sounds when they move, and chasing the player when spotting them</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/blindJumping.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection unreal" onmouseenter="changeImage('cbbaImage', 'media/gifs/cbbaGameplay.gif')" onmouseleave="changeImage('cbbaImage', 'media/cbba.png')">
+            <div class="info">
+                <img src="media/cbba.png" alt="cbbaTitle" id="cbbaImage">
+                <div class="text">
+                    <h1>Crescent Beast's Balancing Act</h1>
+                    <h3>A silly endless runner where a clown moves through an obstacle course while on a 
+                        livestream, developed for Global Game Jam 2024 but worked on the project for 48 hours at UAT. 
+                        Awarded Best Use of Theme from UAT.
+                    </h3>
+                    <p><u>Role</u>: Gameplay Programmer, UI Designer
+                    <br><u>Software</u>: Unreal</p>
+                    <ul>
+                        <li>Developed the player controls</li>
+                        <li>Designed and developed the UI to look like a livestream</li>
+                        <li style="margin-left:20px">Crescent Beast and the chat react to how well the player is doing in the game to look more authentic</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/crescentBeastsBalancingAct.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection unity" onmouseenter="changeImage('worldViewImage', 'media/gifs/worldViewGameplay.gif')" onmouseleave="changeImage('worldViewImage', 'media/worldView.png')">
+            <div class="info">
+                <img src="media/worldView.png" alt="worldView" id="worldViewImage">
+                <div class="text">
+                    <h1>World View</h1>
+                    <h3>A unique arcade-style twin stick shooter, developed for the UAT Game Design Workshop Jam in 
+                        March 2023. The game impressed the judges and was awarded Best Audio and Most Technical.
+                    </h3>
+                    <p><u>Role</u>: Gameplay Programmer
+                    <br><u>Software</u>: Unity, HacknPlan</p>
+                    <ul>
+                        <li>Developed the difficulty curve by introducing new enemies as the screen zooms out</li>
+                        <li>Implemented controller support and allowed players to easily switch between keyboard & mouse and controller</li>
+                        <li>Programmed the music so it dynamically changes as the screen zooms out</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/worldView.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection programming unity" onmouseenter="changeImage('cultistImage', 'media/gifs/cultistGameplay.gif')" onmouseleave="changeImage('cultistImage', 'media/cultistFarmTitle.jpg')">
+            <div class="info">
+                <img src="media/cultistFarmTitle.jpg" alt="cultistTitle" id="cultistImage">
+                <div class="text">
+                    <h1>Cultist Farm</h1>
+                    <h3>An eldritch tower defense game, developed for the UAT IGDA Academic Chapter Jam in June 2024.
+                    </h3>
+                    <p><u>Role</u>: Gameplay Programmer, UI Designer
+                    <br><u>Software</u>: Unity, Trello</p>
+                    <ul>
+                        <li>Discussed the code architecture with the other programmers to streamline the programming process</li>
+                        <li>Designed and developed the UI to allow for tower placement and camera movement with the mouse</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/cultistFarm.html">Read More</a></button>
+            </div>
+        </div>
+        <div class="subsection unreal" onmouseenter="changeImage('lightImage', 'media/gifs/lightGameplay.gif')" onmouseleave="changeImage('lightImage', 'media/light.png')">
+            <div class="info">
+                <img src="media/light.png" alt="lightTitle" id="lightImage">
+                <div class="text">
+                    <h1>Light: Lite</h1>
+                    <h3>A first-person puzzle game about navigating through light, developed for the UAT Game Jam 
+                        in July 2023. The judges were impressed with the mechanics and awarded the game Best Technical Achievement.
+                    </h3>
+                    <p><u>Role</u>: Gameplay Programmer, Level Designer
+                    <br><u>Software</u>: Unreal</p>
+                    <ul>
+                        <li>Developed the light navigation system, preventing the player from moving outside of light</li>
+                        <li style="margin-left:20px">Used raycasting to allow for obstacles</li>
+                        <li style="margin-left:20px">Modularized the system to use it in pickups for more intricate puzzles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="link">
+                <button class="linkButton"><a href="projects/lightLite.html">Read More</a></button>
+            </div>
+        </div>
     </div>
 
     <app-footer data-year="2024"></app-footer>
 </body>
 
 <script>
+    let overallElements = document.querySelectorAll('.overall');
+    let designElements = document.querySelectorAll('.design');
+    let programmingElements = document.querySelectorAll('.programming');
+    let unityElements = document.querySelectorAll('.unity');
+    let unrealElements = document.querySelectorAll('.unreal');
+
     function changeImage(elementID, imageName) {
         document.getElementById(elementID).src = imageName;
+    }
+    
+    function overallButton() {
+        designElements.forEach(element => {element.style.display = 'none'})
+        programmingElements.forEach(element => {element.style.display = 'none'})
+        unityElements.forEach(element => {element.style.display = 'none'})
+        unrealElements.forEach(element => {element.style.display = 'none'})
+        overallElements.forEach(element => {element.style.display = 'inline'})
+    }
+
+    function gameDesignButton() {
+        overallElements.forEach(element => {element.style.display = 'none'})
+        programmingElements.forEach(element => {element.style.display = 'none'})
+        unityElements.forEach(element => {element.style.display = 'none'})
+        unrealElements.forEach(element => {element.style.display = 'none'})
+        designElements.forEach(element => {element.style.display = 'inline'})
+    }
+
+    function gameProgrammingButton() {
+        designElements.forEach(element => {element.style.display = 'none'})
+        overallElements.forEach(element => {element.style.display = 'none'})
+        unityElements.forEach(element => {element.style.display = 'none'})
+        unrealElements.forEach(element => {element.style.display = 'none'})
+        programmingElements.forEach(element => {element.style.display = 'inline'})
+    }
+
+    function unityButton() {
+        designElements.forEach(element => {element.style.display = 'none'})
+        programmingElements.forEach(element => {element.style.display = 'none'})
+        overallElements.forEach(element => {element.style.display = 'none'})
+        unrealElements.forEach(element => {element.style.display = 'none'})
+        unityElements.forEach(element => {element.style.display = 'inline'})
+    }
+
+    function unrealButton() {
+        designElements.forEach(element => {element.style.display = 'none'})
+        programmingElements.forEach(element => {element.style.display = 'none'})
+        overallElements.forEach(element => {element.style.display = 'none'})
+        unityElements.forEach(element => {element.style.display = 'none'})
+        unrealElements.forEach(element => {element.style.display = 'inline'})
     }
 </script>
 

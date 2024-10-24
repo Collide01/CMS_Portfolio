@@ -147,6 +147,7 @@ header {
     color: white;
     margin: 0;
     padding: 0;
+    border-radius: 14px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -186,7 +187,7 @@ header {
     display: inline-block;
     cursor: pointer;
     width: 100%;
-    font-size: 135%;;
+    font-size: 135%;
 }
 .projectPageButton a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -229,42 +230,27 @@ pre code {
 #programmingObjective1, #programmingObjective2, #programmingObjective3, #programmingObjective4, #programmingObjective5, #programmingObjective6 {
     display: none;
 }
-#contact {
-    margin-top: 2vh;
-    padding-bottom: 1vh;
-    background-color: lightblue;
-    color: black;
+
+#titleButtons {
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    border-top: 3px solid black;
-  }
-  .contactinfo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-flow: wrap;
-  }
-  .contactinfo > p a {
-   display: block;
-   text-align: center;
-   padding: 14px 16px;
-   background-color: #000055;
-   text-decoration: none;
-  }
-  .contactinfo > p > a:link, a:visited {
+}
+
+[type='radio'] {
+    display: none;
+}
+[type='radio'] ~ span {
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 12px;
     color: white;
-  }
-  .contactinfo > p > a:focus {
-    color: white;
-    background-color: #000033;
-  }
-  .contactinfo > p > a:hover {
-    color: white;
-    background-color: #000033;
-  }
-  .contactinfo > p > a:active {
-    color: white;
-    background-color: #000033;
-  }
+    background-color: gray;
+    text-decoration: none;
+}
+[type='radio']:checked ~ span, [type='radio']:hover ~ span {
+    background-color: darkgray;
+}
 
 @media only screen and (max-width:1023px) {
     .subsection {

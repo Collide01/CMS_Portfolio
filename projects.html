@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css" />
-    <title>Class Projects | Collin's Portfolio</title>
+    <title>Academic Projects | Collin's Portfolio</title>
     <link rel="icon" href="media/logo.png">
     <script type="module" src="src/webcomp-loader.js"></script>
 </head>
@@ -14,9 +14,9 @@
     <app-navbar data-name="PROJECTS" data-projectPage="false"></app-navbar>
 
     <div class="gameBoxes">
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('spaceInvadersImage', 'media/gifs/spaceInvadersGameplay.gif')" onmouseleave="changeImage('spaceInvadersImage', 'media/spaceInvadersTitle.png')">
             <div class="info">
-                <img src="media/spaceInvadersTitle.png" alt="spaceInvadersTitle">
+                <img src="media/spaceInvadersTitle.png" alt="spaceInvadersTitle" id="spaceInvadersImage">
                 <div class="text">
                     <h1>Space Invaders: The Bizarro Dimension</h1>
                     <h3>A unique spin on the classic game, developed in 2 weeks.
@@ -36,7 +36,7 @@
                 <button class="linkButton"><a href="projects/spaceInvaders.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection">
+        <!-- <div class="subsection">
             <div class="info">
                 <img src="media/talismanTitle.png" alt="talismanTitle">
                 <div class="text">
@@ -56,7 +56,7 @@
             <div class="link">
                 <button class="linkButton"><a href="projects/talismanOfEthshar.html">Read More</a></button>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="subsection">
             <div class="image">
                 <img src="media/compendium.png" alt="compendium">
@@ -85,9 +85,9 @@
                 </p>
             </div>
         </div> -->
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('vitaminImage', 'media/gifs/vitaminGameplay.gif')" onmouseleave="changeImage('vitaminImage', 'media/vitamin.png')">
             <div class="info">
-                <img src="media/vitamin.png" alt="vitamin">
+                <img src="media/vitamin.png" alt="vitamin" id="vitaminImage">
                 <div class="text">
                     <h1>Vitamin Deficiency</h1>
                     <h3>A top-down rougelike where a farmer fights vegetable monsters.
@@ -137,9 +137,9 @@
                 </p>
             </div>
         </div>-->
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('flowOfTimeImage', 'media/gifs/flowOfTimeGameplay.gif')" onmouseleave="changeImage('flowOfTimeImage', 'media/theFlowOfTime.png')">
             <div class="info">
-                <img src="media/theFlowOfTime.png" alt="flowOfTime">
+                <img src="media/theFlowOfTime.png" alt="flowOfTime" id="flowOfTimeImage">
                 <div class="text">
                     <h1>The Flow of Time</h1>
                     <h3>A quick top-down shooter with a time manipulation mechanic. Defeat the boss in 10 seconds or lose!
@@ -158,9 +158,9 @@
                 <button class="linkButton"><a href="projects/flowOfTime.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection">
+        <div class="subsection" onmouseenter="changeImage('blindJumpingImage', 'media/gifs/blindJumpingGameplay.gif')" onmouseleave="changeImage('blindJumpingImage', 'media/blindJumping.png')">
             <div class="info">
-                <img src="media/blindJumping.png" alt="blindJumping">
+                <img src="media/blindJumping.png" alt="blindJumping" id="blindJumpingImage">
                 <div class="text">
                     <h1>Blind Jumping</h1>
                     <h3>A 3D horror platformer where vision is obscured and the player must navigate with sound.
@@ -179,7 +179,7 @@
                 <button class="linkButton"><a href="projects/blindJumping.html">Read More</a></button>
             </div>
         </div>
-        <div class="subsection">
+        <!-- <div class="subsection">
             <div class="info">
                 <img src="media/ufo.png" alt="ufo">
                 <div class="text">
@@ -199,8 +199,8 @@
             <div class="link">
                 <button class="linkButton"><a href="projects/ufoAttack.html">Read More</a></button>
             </div>
-        </div>
-        <div class="subsection">
+        </div> -->
+        <!-- <div class="subsection">
             <div class="info">
                 <img src="media/zeldaWizzrobe1.png" alt="wizzrobe1">
                 <div class="text">
@@ -221,10 +221,10 @@
             <div class="link">
                 <button class="linkButton"><a href="projects/wizzrobeWonders.html">Read More</a></button>
             </div>
-        </div>
-        <div class="subsection">
+        </div> -->
+        <div class="subsection" onmouseenter="changeImage('discoveryImage', 'media/gifs/zeldaDiscoveryGameplay.gif')" onmouseleave="changeImage('discoveryImage', 'media/zeldaDiscovery1.png')">
             <div class="info">
-                <img src="media/zeldaDiscovery1.png" alt="discovery1">
+                <img src="media/zeldaDiscovery1.png" alt="discovery1" id="discoveryImage">
                 <div class="text">
                     <h1>Discovery</h1>
                     <h3>A Zelda quest on a similar scale to the original Legend of Zelda. Was supposed to be a level design 
@@ -250,5 +250,11 @@
 
     <app-footer data-year="2024"></app-footer>
 </body>
+
+<script>
+    function changeImage(elementID, imageName) {
+        document.getElementById(elementID).src = imageName;
+    }
+</script>
 
 </html>

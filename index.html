@@ -25,6 +25,18 @@
             background-position-x: center;
             background-position-y: center;
         }
+
+        #koaImage2, #cursedMenImage2, #blindJumpingImage2, #discoveryImage2, #worldViewImage2, #lightImage2, #cbbaImage2, #cultistImage2 {
+            display: none;
+        }
+
+        .design, .programming, .unity, .unreal {
+            display: none;
+        }
+
+        .overall {
+            display: inline;
+        }
     </style>
 </head>
 
@@ -327,18 +339,6 @@
 
     let element1;
     let element2;
-
-    window.onload = () => {
-        changeImage('koaImage1', 'koaImage2', false);
-        changeImage('cursedMenImage1', 'cursedMenImage2', false);
-        changeImage('blindJumpingImage1', 'blindJumpingImage2', false);
-        changeImage('discoveryImage1', 'discoveryImage2', false);
-        changeImage('worldViewImage1', 'worldViewImage2', false);
-        changeImage('lightImage1', 'lightImage2', false);
-        changeImage('cbbaImage1', 'cbbaImage2', false);
-        changeImage('cultistImage1', 'cultistImage2', false);
-        overallButton();
-    }
 
     function changeImage(elementID1, elementID2, hovering) {
         element1 = document.getElementById(elementID1);

@@ -8,6 +8,12 @@
     <title>Game Jams | Collin's Portfolio</title>
     <link rel="icon" href="media/logo.png">
     <script type="module" src="src/webcomp-loader.js"></script>
+
+    <style>
+        #sssnImage2, #hypercalcemiaImage2, #uprootedImage2, #worldViewImage2, #lightImage2, #cbbaImage2, #cultistImage2 {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -201,16 +207,6 @@
 <script>
     let element1;
     let element2;
-
-    window.onload = () => {
-        changeImage('sssnImage1', 'sssnImage2', false);
-        changeImage('hypercalcemiaImage1', 'hypercalcemiaImage2', false);
-        changeImage('uprootedImage1', 'uprootedImage2', false);
-        changeImage('worldViewImage1', 'worldViewImage2', false);
-        changeImage('lightImage1', 'lightImage2', false);
-        changeImage('cbbaImage1', 'cbbaImage2', false);
-        changeImage('cultistImage1', 'cultistImage2', false);
-    }
 
     function changeImage(elementID1, elementID2, hovering) {
         element1 = document.getElementById(elementID1);

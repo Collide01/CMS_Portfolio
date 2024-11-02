@@ -8,7 +8,6 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
-    padding-top: 3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -248,8 +247,49 @@ pre code {
     background-color: gray;
     text-decoration: none;
 }
-[type='radio']:checked ~ span, [type='radio']:hover ~ span {
+[type='radio']:checked ~ span {
     background-color: darkgray;
+}
+[type='radio']:hover ~ span {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.buttonLineup {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    padding: 0;
+    margin: 0;
+}
+.buttonLineup p a {
+    display: block;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background-color: gray;
+    text-decoration: none;
+}
+.buttonLineup p a:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+#backButton {
+    position: absolute;
+    text-align: center;
+    padding: 12px 14px;
+    border-bottom-right-radius: 12px;
+    color: white;
+    background-color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 105%;
+}
+#backButton:hover {
+    background-color: darkgray;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:1023px) {

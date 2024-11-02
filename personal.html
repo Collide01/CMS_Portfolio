@@ -10,6 +10,22 @@
     <script type="module" src="src/webcomp-loader.js"></script>
 
     <style>
+        header {
+            background-color: black;
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url(media/title.png);
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
         #koaImage2, #cursedMenImage2 {
             display: none;
         }
@@ -17,7 +33,16 @@
 </head>
 
 <body>
-    <app-navbar data-name="PERSONAL" data-projectPage="false"></app-navbar>
+    <button id="backButton" onclick="history.back()">← Return</button>
+
+    <header id="titlePage">
+        <div id="title">
+            <p>Personal Projects</p>
+        </div>
+        <div id="tagline">
+            <p>Big Projects with Tons of Time Put Into Them</p>
+        </div>
+    </header>
 
     <div class="gameBoxes">
         <div class="subsection" onmouseenter="changeImage('koaImage1', 'koaImage2', true)" onmouseleave="changeImage('koaImage1', 'koaImage2', false)">
